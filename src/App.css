@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:           #f8fafc;
+  --surface:      #ffffff;
+  --border:       #e2e8f0;
+  --shadow:       0 1px 3px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 24px rgba(0,0,0,0.12);
+  --text:         #0f172a;
+  --text-muted:   #64748b;
+  --emerald:      #10b981;
+  --emerald-soft: #d1fae5;
+  --blue:         #3b82f6;
+  --blue-soft:    #dbeafe;
+  --amber:        #f59e0b;
+  --amber-soft:   #fef3c7;
+  --orange:       #f97316;
+  --orange-soft:  #ffedd5;
+  --red:          #ef4444;
+  --red-soft:     #fee2e2;
+  --slate:        #94a3b8;
+  --slate-soft:   #f1f5f9;
+  --radius:       14px;
+  --font:         'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text);
+       min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+.app { max-width: 960px; margin: 0 auto; padding: 32px 20px 60px; }
+.app-header { text-align: center; margin-bottom: 32px; }
+.app-title { font-size: 26px; font-weight: 700; color: var(--text); }
+.app-subtitle { font-size: 14px; color: var(--text-muted); margin-top: 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px; margin-top: 24px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between;
+           flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.btn-tambah-surah { background: var(--emerald); color: white; border: none;
+                    padding: 10px 20px; border-radius: 10px; font-size: 14px;
+                    font-weight: 600; cursor: pointer; font-family: var(--font);
+                    transition: opacity 0.2s, transform 0.2s; }
+.btn-tambah-surah:hover { opacity: 0.9; transform: translateY(-1px); }
+
+@media (max-width: 600px) {
+  .app { padding: 20px 14px 40px; }
+  .app-title { font-size: 20px; }
+  .grid { grid-template-columns: 1fr; }
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .btn-tambah-surah { width: 100%; text-align: center; }
+}

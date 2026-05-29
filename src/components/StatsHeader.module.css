@@ -1,0 +1,13 @@
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr);
+             gap: 12px; margin-bottom: 8px; }
+.statCard  { background: var(--surface); border: 1px solid var(--border);
+             border-radius: var(--radius); padding: 16px; text-align: center;
+             box-shadow: var(--shadow); }
+.statAngka { display: block; font-size: 26px; font-weight: 700; color: var(--text); }
+.statLabel { display: block; font-size: 11px; color: var(--text-muted);
+             margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.hijau { color: var(--emerald); }
+.biru  { color: var(--blue);   }
+@media (max-width: 600px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+}
